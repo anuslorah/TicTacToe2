@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="button00" />
+    <string name="button01" />
+    <string name="button02" />
+    <string name="button10" />
+    <string name="button11" />
+    <string name="button12" />
+    <string name="button20" />
+    <string name="button21" />
+    <string name="button22" />
+    <string name="start">start new game</string>
+    <string name="winner" />
+    />
+</resources>
