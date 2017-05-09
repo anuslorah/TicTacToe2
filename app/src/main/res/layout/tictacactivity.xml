@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:layout_weight="1"
     android:padding="20dp" >
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/button00"
@@ -17,8 +15,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:textSize="42sp"
-            android:text=""
-            android:textAppearance="@style/TextAppearance.AppCompat" />
+            android:text="@string/button00" />
 
         <Button
             android:id="@+id/button01"
@@ -38,8 +35,8 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/button10"
@@ -67,8 +64,8 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/button20"
@@ -96,30 +93,32 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
 
         <TextView
             android:id="@+id/winner"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:layout_gravity="center"
-            android:text="@string/winner" />
+            android:layout_span="3"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="" />
     </TableRow>
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
 
         <Button
             android:id="@+id/start"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_span="3"
+            android:gravity="center"
             android:text="@string/start" />
     </TableRow>
 

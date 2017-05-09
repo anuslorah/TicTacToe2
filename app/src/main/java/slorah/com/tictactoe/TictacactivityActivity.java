@@ -1,5 +1,6 @@
 package slorah.com.tictactoe;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,8 @@ public class TictacactivityActivity extends AppCompatActivity {
     Button b00, b01, b02, b10, b11, b12, b20, b21, b22;
     TextView info;
     Button start;
-    int turn;
+    private int turn;
+    private SharedPreferences savedValues;
 
 
     @Override
@@ -194,6 +196,50 @@ public class TictacactivityActivity extends AppCompatActivity {
             }
         });
     }
+/*
+    @Override
+    public void onPause() {
+
+        //save the instance variables
+        SharedPreferences.Editor editor = savedValues.edit();
+        editor.putString("textView", info.getText().toString());
+        editor.putString("b00", b00.getText().toString());
+        editor.putString("b01", b01.getText().toString());
+        editor.putString("b02", b02.getText().toString());
+        editor.putString("b10", b10.getText().toString());
+        editor.putString("b11", b11.getText().toString());
+        editor.putString("b12", b12.getText().toString());
+        editor.putString("b20", b20.getText().toString());
+        editor.putString("b21", b21.getText().toString());
+        editor.putString("b22", b22.getText().toString());
+
+        editor.commit();
+
+        super.onPause();
+    }
+
+    @Override
+    public void onResume(){
+
+        super.onResume();
+
+        //get the instance variables
+        info.setText(savedValues.getString("textView",info.toString()));
+
+        b00 = savedValues.getString(b00,"");
+
+        b00.setText(b00.toString());
+        b01.setText(b01.toString());;
+        b02.setText(b02.toString());
+        b10.setText(b10.toString());
+        b11.setText(b11.toString());
+        b12.setText(b12.toString());
+        b20.setText(b20.toString());
+        b21.setText(b21.toString());
+        b22.setText(b22.toString());
+    }
+
+*/
     public void endGame(){
         String s00, s01, s02, s10, s11, s12, s20, s21, s22;
         s00 = b00.getText().toString();
@@ -254,7 +300,9 @@ public class TictacactivityActivity extends AppCompatActivity {
         else if (s20.equals(s11) && s20.equals(s02) && s20.equals("O")){
             info.setText("Player O wins!");
         }
-        else {
+        else if (!s00.equals("") && !s01.equals("") && !s02.equals("") && !s10.equals("")
+                && !s11.equals("") && !s12.equals("") && !s20.equals("") && !s21.equals("")
+                && !s22.equals("")){
             info.setText("It is a draw..");
         }
     }
